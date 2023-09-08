@@ -7,22 +7,15 @@ import java.time.LocalDate;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-@Service // Para decir que esta clase es logica de negocio.
+@Service
 public class EstudianteLogica {
 
-  private EstudianteRepository estudianteRepository;
+  private final EstudianteRepository estudianteRepository;
 
   public EstudianteLogica(EstudianteRepository estudianteRepository) {
     this.estudianteRepository = estudianteRepository;
   }
- /*
-  public List<EstudianteDTO> obtenerEstudiantes() {
-    return estudianteRepository.findAll().stream().map(
-        estudiante -> new EstudianteDTO(estudiante.getCodigo(), estudiante.getNombre(),
-            estudiante.getSemestre(), estudiante.getSexo())).collect(Collectors.toList());
-  }
 
-  */
 
   public List<Estudiante> obtenerEstudiantes() {
     return estudianteRepository.findAll();
