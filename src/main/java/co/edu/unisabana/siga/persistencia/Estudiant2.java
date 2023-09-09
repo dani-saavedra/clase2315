@@ -44,8 +44,7 @@ public class Estudiant2 {
   @Column
   private String otroApellido;
 
-  @Column
-  private String otroApellido2;
+
 
   public String getPrograma() {
     return programa;
