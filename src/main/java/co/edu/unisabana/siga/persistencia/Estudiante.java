@@ -47,9 +47,6 @@ public class Estudiante {
   @Column
   private String otroApellido2;
 
-  @Column
-  private String otroApellido3;
-
   public String getPrograma() {
     return programa;
   }
