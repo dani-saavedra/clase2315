@@ -17,11 +17,12 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
-
+	implementation("net.logstash.logback:logstash-logback-encoder:7.4")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("mysql:mysql-connector-java:8.0.32")
+	compileOnly("org.projectlombok:lombok:1.18.28")
+	implementation("org.projectlombok:lombok:1.18.28")
 	implementation("io.micrometer:micrometer-registry-new-relic:1.11.3")
-	implementation("org.graylog2:gelfj:1.1.16")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 }
