@@ -1,11 +1,15 @@
 package co.edu.unisabana.siga.logica;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Calculo {
 
-  public void sumar(int num1, int num2) {
-    System.out.println(num1 + num2);
+  public int sumar(int num1, int num2) {
+    return num1 + num2;
   }
-  public void multiplicacion(int num1, int num2) {
-    System.out.println(num1 * num2);
+
+  public int multiplicacion(int num1, int num2) {
+    return num1 * num2;
   }
 }

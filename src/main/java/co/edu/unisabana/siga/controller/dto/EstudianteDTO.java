@@ -11,6 +11,18 @@ public class EstudianteDTO {
 
   private ProgramaEnum programa;
 
+  public EstudianteDTO() {
+  }
+
+  public EstudianteDTO(String nombre, int codigo, int semestre, String sexo,
+      ProgramaEnum programa) {
+    this.nombre = nombre;
+    this.codigo = codigo;
+    this.semestre = semestre;
+    this.sexo = sexo;
+    this.programa = programa;
+  }
+
   public ProgramaEnum getPrograma() {
     return programa;
   }

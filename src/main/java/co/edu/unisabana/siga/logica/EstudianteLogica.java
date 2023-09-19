@@ -5,6 +5,7 @@ import co.edu.unisabana.siga.persistencia.Estudiante;
 import co.edu.unisabana.siga.persistencia.EstudianteRepository;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,7 +22,7 @@ public class EstudianteLogica {
     return estudianteRepository.findAll();
   }
 
-  public void guardarEstudiante(EstudianteDTO estudianteDTO) {
+  public Estudiante guardarEstudiante(EstudianteDTO estudianteDTO) {
 
     if ("Daniel".equals(estudianteDTO.getNombre())) {
       throw new IllegalArgumentException("Prohibido los Daniel, tenemos exceso de ellos");
@@ -36,11 +37,11 @@ public class EstudianteLogica {
       estudiante.setMatricula(30);
     } else {
       estudiante.setMatricula(20);
-
     }
     estudiante.setSemestre(estudianteDTO.getSemestre());
     estudiante.setSexo(estudianteDTO.getSexo());
     estudiante.setPrograma(estudianteDTO.getPrograma().name());
     estudianteRepository.save(estudiante);
+    return estudiante;
   }
 }

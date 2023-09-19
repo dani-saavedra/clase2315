@@ -38,15 +38,6 @@ public class Estudiante {
   @Column
   private LocalDate fechaModificacion;
 
-  @Column
-  private String apellido;
-
-  @Column
-  private String otroApellido;
-
-  @Column
-  private String otroApellido2;
-
   public String getPrograma() {
     return programa;
   }
