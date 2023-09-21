@@ -12,7 +12,7 @@ class CalculoTest {
   @Test
   void Cuando_invoque_sumar_Entonces_da_8() {
     int resultado = calculo.sumar(3, 5);
-    assertEquals(9, resultado);
+    assertEquals(8, resultado);
   }
 
   @Test

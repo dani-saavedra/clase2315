@@ -33,7 +33,7 @@ public class Estudiante {
   private String programa;
 
   @Column
-  private LocalDate fechaCreacion;
+  private LocalDate fechaCreacion
 
   @Column
   private LocalDate fechaModificacion;

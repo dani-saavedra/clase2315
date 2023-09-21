@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@ActiveProfiles(profiles = "test")
+@ActiveProfiles(profiles = "pruebitas")
 class EstudianteControllerTest {
 
 
